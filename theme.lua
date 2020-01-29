@@ -27,9 +27,9 @@ theme.font          = "JetBrains Mono Regular 9"
 theme.title_font    = "JetBrains Mono Medium 12"
 
 -- Background
-theme.bg_normal     = "#1f2430"
-theme.bg_dark       = "#000000"
-theme.bg_focus      = "#151821"
+theme.bg_normal     = "#403e41"
+theme.bg_dark       = "#fcfcfa"
+theme.bg_focus      = "#ff6188"
 theme.bg_urgent     = "#3f3f3f"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
