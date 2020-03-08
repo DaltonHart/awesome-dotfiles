@@ -27,14 +27,14 @@ local dpi = require('beautiful').xresources.apply_dpi
 naughty.config.defaults.ontop = true
 naughty.config.defaults.icon_size = dpi(32)
 naughty.config.defaults.screen = awful.screen.focused()
-naughty.config.defaults.timeout = 5
+naughty.config.defaults.timeout = 10
 naughty.config.defaults.shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, dpi(6)) end
 naughty.config.defaults.title = 'System Notification'
 
 -- Apply theme variables
-naughty.config.padding = 8
-naughty.config.spacing = 8
-naughty.config.defaults.margin = dpi(16)
+naughty.config.padding = 15
+naughty.config.spacing = 15
+naughty.config.defaults.margin = dpi(25)
 naughty.config.defaults.border_width = 0
 naughty.config.defaults.position = 'top_right'
 
@@ -57,7 +57,7 @@ naughty.config.presets.low = {
 }
 
 naughty.config.presets.critical = {
-  font         = 'SF Display Bold 10',
+  font         = 'SF Display Bold 18',
   fg           = '#ffffff',
   bg           = '#ff0000',
   position     = 'top_right',

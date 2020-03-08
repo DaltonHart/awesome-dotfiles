@@ -17,8 +17,8 @@ local filesystem = require('gears.filesystem')
 
 local apps = {
     terminal = "kitty",
-    launcher = "rofi -modi drun -show drun",
-    lock = "i3lock",
+    launcher = 'rofi -modi drun -show drun -display-drun "Search"  -show-icons',
+    lock = "i3lock-fancy -p",
     screenshot = "scrot -e 'mv $f ~/Pictures/ 2>/dev/null'",
     filebrowser = "nautilus",
     browser = "chromium",
@@ -26,15 +26,14 @@ local apps = {
     musicPlayer = "spotify",
     gameLauncher = "steam",
     imageEditor = "gimp",
-    virtualMachineLauncher = "virt-manager"
+    virtualMachineLauncher = "virt-manager",
+    slack = 'slack'
 }
 
 -- List of apps to start once on start-up
 local run_on_start_up = {
     "picom",
-    "redshift",
-    "unclutter",
-    "flashfocus"
+    "unclutter"
 }
 
 

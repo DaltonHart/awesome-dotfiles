@@ -75,28 +75,28 @@ local function unblur()
 end
 
 -- blur / unblur on tag change
-tag.connect_signal('property::selected', function(t)
-   -- if tag has clients
-   for _ in pairs(t:clients()) do
-      blur()
-      return
-   end
-   -- if tag has no clients
-   unblur()
-end)
+-- tag.connect_signal('property::selected', function(t)
+--    -- if tag has clients
+--    for _ in pairs(t:clients()) do
+--       blur()
+--       return
+--    end
+--    -- if tag has no clients
+--    unblur()
+-- end)
 
 -- check if wallpaper should be blurred on client open
-client.connect_signal("manage", function(c)
-   blur()
-end)
+-- client.connect_signal("manage", function(c)
+--    blur()
+-- end)
 
 -- check if wallpaper should be unblurred on client close
-client.connect_signal("unmanage", function(c)
-   local t = awful.screen.focused().selected_tag
-   -- check if any open clients
-   for _ in pairs(t:clients()) do
-      return
-   end
-   -- unblur if no open clients
-   unblur()
-end)
+-- client.connect_signal("unmanage", function(c)
+--    local t = awful.screen.focused().selected_tag
+--    -- check if any open clients
+--    for _ in pairs(t:clients()) do
+--       return
+--    end
+--    -- unblur if no open clients
+--    unblur()
+-- end)

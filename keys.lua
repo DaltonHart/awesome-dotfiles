@@ -77,6 +77,24 @@ keys.globalkeys = gears.table.join(
         end,
         {description = "application launcher", group = "launcher"}
     ),
+     awful.key({ modkey }, "a",
+        function()
+            awful.spawn(apps.editor)
+        end,
+        {description = "open code", group = "launcher"}
+    ),
+    awful.key({ modkey }, "w",
+        function()
+            awful.spawn(apps.browser)
+        end,
+        {description = "open chrome", group = "launcher"}
+    ),
+    awful.key({ modkey }, "s",
+        function()
+            awful.spawn(apps.slack)
+        end,
+        {description = "open slack", group = "launcher"}
+    ),
 
     -- =========================================
     -- VOLUME / BRIGHTNESS / SCREENSHOT
@@ -288,6 +306,8 @@ keys.globalkeys = gears.table.join(
     -- =========================================
     -- CLIENT RESIZING (TODO)
     -- =========================================
+
+    
 
     -- =========================================
     -- NUMBER OF MASTER / COLUMN CLIENTS
